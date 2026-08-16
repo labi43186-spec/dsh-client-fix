@@ -31,12 +31,25 @@ DSH Desktop 客户端修复插件（client-side fix plugin）。
 
 ## 安装
 
+包已发布到 npm，直接装 **web** profile（市场默认操作目标，装完会自动同步到 desktop）：
+
 ```bash
-# 在无空格路径下（含空格路径会被 dsh→pnpm 转发截断）
-cd C:/dshplugins
-dsh plugin --profile desktop add ./dsh-client-fix
-dsh plugin --profile web add ./dsh-client-fix
+dsh plugin --profile web add dsh-client-fix
 ```
+
+或者直接装 **desktop** profile（桌面应用实际加载的 profile，装完后 fs.watch 会自动把 web 同步上）：
+
+```bash
+dsh plugin --profile desktop add dsh-client-fix
+```
+
+> **注意**：用 npm 包名安装，不要写路径。本地开发调试时可改用 `link:` 指向源码目录：
+>
+> ```bash
+> dsh plugin --profile desktop add link:C:/dshplugins/dsh-client-fix
+> ```
+>
+> （源码目录建议放在无空格路径下，含空格路径会被 dsh→pnpm 转发截断）
 
 ## 接口
 
