@@ -1,8 +1,9 @@
 # dsh-client-fix
 
-> **作用**：DSH Desktop 客户端一键修复插件——自动修复 pnpm shim 中文路径乱码（"系统找不到指定的路径"）、
-> 让 web profile 无延迟自动跟随 desktop 的插件变化（向 desktop 对齐）、安装前自动预加
-> minimumReleaseAgeExclude 豁免，市场更新即同步，无需手动干预。
+> **作用是啥（大白话）**：装了它之后，DSH Desktop 桌面端用 `dsh plugin` 命令安装插件时
+> 老报的"系统找不到指定的路径"就没了——那是桌面端生成 pnpm 命令时把中文路径搞乱码导致的，
+> 这个插件启动后会自动修好。同时它还会自动把 web 端的插件同步成和桌面端一模一样：
+> 桌面装了什么 web 就跟着装什么，桌面卸载了 web 也跟着卸，不用你手动去同步。
 >
 > **使用 DeepSeek-V4-Flash 制作** 🤖
 
