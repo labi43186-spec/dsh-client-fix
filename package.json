@@ -1,0 +1,32 @@
+{
+  "name": "dsh-client-fix",
+  "description": "客户端修复插件：fs.watch无延迟自动同步web(市场更新即同步) + 预加豁免 + 修复shim",
+  "version": "1.5.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "fix",
+    "sync"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "data",
+    "cordis.patch.yml"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
